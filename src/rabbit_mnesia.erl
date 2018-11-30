@@ -1025,6 +1025,8 @@ nodes_incl_me(Nodes) -> lists:usort([node()|Nodes]).
 
 nodes_excl_me(Nodes) -> Nodes -- [node()].
 
+-spec e(any()) -> no_return().
+
 e(Tag) -> throw({error, {Tag, error_description(Tag)}}).
 
 error_description({invalid_cluster_node_names, BadNames}) ->
